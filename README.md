@@ -11,4 +11,4 @@ https://media.discordapp.net/attachments/1049075790442135604/1101898591494217778
 https://media.discordapp.net/attachments/1049075790442135604/1101898591783637072/image.png?width=1440&height=632
 
 # Credits
-@ProjectSloth
+@ProjectSloth https://github.com/Project-Sloth
