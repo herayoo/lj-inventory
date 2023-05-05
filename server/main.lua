@@ -1314,7 +1314,7 @@ RegisterNetEvent('inventory:server:OpenInventory', function(name, id, other)
 					secondInv.slots = 0
 				end
 			end
-			TriggerClientEvent("qb-inventory:client:closeinv", id)
+			TriggerClientEvent("lj-inventory:client:closeinv", id)
 			TriggerClientEvent("inventory:client:OpenInventory", src, {}, Player.PlayerData.items, secondInv)
 		else
 			TriggerClientEvent("inventory:client:OpenInventory", src, {}, Player.PlayerData.items)
@@ -2042,7 +2042,7 @@ RegisterNetEvent('inventory:server:SetInventoryData', function(fromInventory, to
 					if stashId == "bag_".. fromItemData.info.stashName then
 						RemoveFromStash(stashId, fromSlot, itemInfo["name"], fromAmount)
 						Player.Functions.AddItem(fromItemData.name, fromAmount, fromSlot, fromItemData.info)
-						TriggerClientEvent('qb-inventory:client:CloseInv', src)
+						TriggerClientEvent('lj-inventory:client:CloseInv', src)
 						TriggerClientEvent('QBCore:Notify', src, "Aynı çantayı çanta içine koyamazsın..", 'error')
 					else
 						AddToStash(stashId, toSlot, fromSlot, itemInfo["name"], fromAmount, fromItemData.info)
@@ -2537,7 +2537,7 @@ RegisterNetEvent('inventory:server:SetInventoryData', function(fromInventory, to
 	end
 end)
 
-RegisterNetEvent('qb-inventory:server:SaveStashItems', function(stashId, items)
+RegisterNetEvent('lj-inventory:server:SaveStashItems', function(stashId, items)
     MySQL.Async.insert('INSERT INTO stashitems (stash, items) VALUES (:stash, :items) ON DUPLICATE KEY UPDATE items = :items', {
         ['stash'] = stashId,
         ['items'] = json.encode(items)
@@ -2571,8 +2571,8 @@ RegisterServerEvent("inventory:server:GiveItem", function(target, name, amount, 
 				TriggerClientEvent(src, "QBCore:Notify", OtherPlayer.PlayerData.charinfo.firstname.." "..OtherPlayer.PlayerData.charinfo.lastname.." kişisine "..amount.." adet "..item.label.." verdin")
 				--QBCore.Functions.Notify(src, "You gave " .. OtherPlayer.PlayerData.charinfo.firstname.." "..OtherPlayer.PlayerData.charinfo.lastname.. " " .. amount .. " " .. item.label .."!")
 				TriggerClientEvent("inventory:client:UpdatePlayerInventory", src, true)
-				TriggerClientEvent('qb-inventory:client:giveAnim', src)
-				TriggerClientEvent('qb-inventory:client:giveAnim', target)
+				TriggerClientEvent('lj-inventory:client:giveAnim', src)
+				TriggerClientEvent('lj-inventory:client:giveAnim', target)
 			else
 				AddItem(src, item.name, amount, item.slot, item.info)
 				QBCore.Functions.Notify(src, "Diğer oyuncunun envanteri dolu!", "error")
@@ -2598,7 +2598,7 @@ end)
 
 -- callback
 
-QBCore.Functions.CreateCallback('qb-inventory:server:GetStashItems', function(source, cb, stashId)
+QBCore.Functions.CreateCallback('lj-inventory:server:GetStashItems', function(source, cb, stashId)
 	cb(GetStashItems(stashId))
 end)
 
@@ -2880,8 +2880,8 @@ RegisterServerEvent("inventory:server:GiveItem0", function(target, name, amount,
 
         TriggerClientEvent('QBCore:Notify', src, "" ..otherName .. "'e " .. amount .. " adet " .. item.label .." verdiniz!")
         TriggerClientEvent("inventory:client:UpdatePlayerInventory", src, true)
-        TriggerClientEvent('qb-inventory:client:giveAnim', src)
-        TriggerClientEvent('qb-inventory:client:giveAnim', target)
+        TriggerClientEvent('lj-inventory:client:giveAnim', src)
+        TriggerClientEvent('lj-inventory:client:giveAnim', target)
       else
         Player.Functions.AddItem(item.name, amount, item.slot, item.info)
         TriggerClientEvent('QBCore:Notify', src,  "Diğer oyuncuların envanteri dolu!", "error")

@@ -2636,7 +2636,7 @@ var requiredItemOpen = false;
     Inventory.Open = function(data) {
         totalWeight = 0;
         totalWeightOther = 0;
-        $("#player-inv-label").html("Oyuncu - <i class='fas fa-money-bill-alt' style='color: green; font-style: normal;'></i>"+"<i style='color: green; font-style: normal;'>"+" "+data.para+"</i>")
+        $("#player-inv-label").html("<i style='color: white; font-style: normal;'>"+" "+data.para+"</i>")
         $(".player-inventory").find(".item-slot").remove();
         $(".ply-hotbar-inventory").find(".item-slot").remove();
         $(".ply-iteminfo-container").css("opacity", "0.0");

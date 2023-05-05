@@ -566,7 +566,7 @@ RegisterNetEvent('inventory:client:OpenInventory', function(PlayerAmmo, inventor
                     other = other,
                     maxweight = Config.MaxInventoryWeight,
                     Ammo = PlayerAmmo,
-                    para = PlayerData.money["cash"],
+                    para = PlayerData.charinfo.firstname..' '..PlayerData.charinfo.lastname..' [ID: '..PlayerData.source..'] - '..PlayerData.citizenid,
                     maxammo = Config.MaximumAmmoValues,
                 })
                 inInventory = true
@@ -589,7 +589,7 @@ RegisterNetEvent('inventory:client:OpenInventory', function(PlayerAmmo, inventor
                 other = other,
                 maxweight = Config.MaxInventoryWeight,
                 Ammo = PlayerAmmo,
-                para = PlayerData.money["cash"],
+                para = PlayerData.charinfo.firstname..' '..PlayerData.charinfo.lastname..' ['..PlayerData.source..'] - '..PlayerData.citizenid,
                 maxammo = Config.MaximumAmmoValues,
             })
             inInventory = true
@@ -787,7 +787,7 @@ RegisterCommand('envfix', function()
     closeInventory()
 end, false)
 
-RegisterNetEvent("qb-inventory:client:closeinv", function()
+RegisterNetEvent("lj-inventory:client:closeinv", function()
     closeInventory()
 end)
 
@@ -889,8 +889,10 @@ RegisterCommand('inventory', function()
                     slots = slots,
                 }
                 TriggerServerEvent("inventory:server:OpenInventory", "trunk", CurrentVehicle, other)
+                ExecuteCommand('me Bagajı açar.')
                 OpenTrunk()
             elseif CurrentGlovebox then
+                ExecuteCommand('me Torpidoya uzanır.')
                 TriggerServerEvent("inventory:server:OpenInventory", "glovebox", CurrentGlovebox)
             elseif CurrentDrop ~= 0 then
                 TriggerServerEvent("inventory:server:OpenInventory", "drop", CurrentDrop)
@@ -931,7 +933,7 @@ for i = 1, 6 do
     RegisterKeyMapping('slot' .. i, 'Uses the item in slot ' .. i, 'keyboard', i)
 end
 
-RegisterNetEvent('qb-inventory:client:giveAnim', function()
+RegisterNetEvent('lj-inventory:client:giveAnim', function()
     LoadAnimDict('mp_common')
 	TaskPlayAnim(PlayerPedId(), 'mp_common', 'givetake1_b', 8.0, 1.0, -1, 16, 0, 0, 0, 0)
 end)
@@ -1078,7 +1080,7 @@ RegisterNUICallback("GiveItem", function(data, cb)
             local playerId = GetPlayerServerId(player)
             SetCurrentPedWeapon(PlayerPedId(),'WEAPON_UNARMED',true)
             TriggerServerEvent("inventory:server:GiveItem", playerId, data.item.name, data.amount, data.item.slot)
-            ExecuteCommand('me '..data.amount..' adet '..data.item.label..' uzatır.')
+            ExecuteCommand('me '..data.amount..' '..data.item.label..' uzatır.')
         end
     else
         QBCore.Functions.Notify("Yakında kimse yok!", "error")

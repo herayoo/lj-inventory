@@ -30,7 +30,7 @@ p { margin: 0 !important; }
 }
 
 .illegal {
-    background: linear-gradient(to right, rgb(153, 0, 0, 18%),  #990000 1000px);
+    background: linear-gradient(to right, rgb(153, 0, 0, 18%),  #990000 52222222222200px);
 }
 
 .police {
@@ -75,25 +75,25 @@ input[type=number]::-webkit-outer-spin-button {
     width: 134.6%;
     margin-left: 0%;
     margin-top: 6.3%;
-    background-color: rgb(39 39 49);
+    background-color: rgb(35, 35, 48, 0.5);
 }
 
 #progressbar-other {
     width: 134.8%;
     margin-left: -1.5%;
     margin-top: 6.3%;
-    background-color: rgb(39 39 49);
+    background-color: rgba(35, 35, 48, 0.5);
 }
 
 .pro {
-    background: linear-gradient(to right, rgb(179, 179, 179), #0b9a82 500px);
+    background: linear-gradient(to right, rgb(179, 179, 179), #5f5f5f 500px);
     height: 10px;
     max-width: 100%;
     transition: width 1s, background-color 1s;
 }
 
 .pro1 {
-    background: linear-gradient(to right, rgb(179, 179, 179), #0b9a82 500px);
+    background: linear-gradient(to right, rgb(179, 179, 179), #5f5f5f 500px);
     height: 10px;
     max-width: 100%;
     transition: width 1s, background-color 1s;
@@ -151,7 +151,7 @@ body {
     max-width: 41%;
     height: 75%;
     max-height: 81%;
-    background: rgb(34 39 48);
+    background: rgba(34, 39, 48, 0.850); 
 }
 
 .player-inventory {
@@ -178,7 +178,7 @@ body {
     max-width: 41%;
     height: 75%;
     max-height: 81%;
-    background: rgb(34 39 48);
+    background: rgb(34, 39, 48, 0.850);
 }
 
 .other-inventory {
@@ -210,7 +210,7 @@ body {
     padding-bottom: 0px;
     padding-left: 3.95vh;
     text-align: left;
-    font-size: 0vh;
+    font-size: 9vh;
     line-height: 1.8vh;
     font-family: 'Poppins', sans-serif !important;
 }
@@ -222,7 +222,7 @@ body {
     padding-bottom: 15px;
     height: auto;
     margin: 16% auto;
-    background: rgb(34 39 48);
+    background: rgb(34, 39, 48, 0.850);
     right: 0px;
     width: 11%;
     left: 3vh;
@@ -311,7 +311,7 @@ body {
 }
 
 .inv-option-item > p {
-    color: white;
+    color: rgb(255, 255, 255);
     text-align: center;
     line-height: 48px;
     text-transform: normal;
@@ -319,8 +319,9 @@ body {
     font-weight: 150;
     font-family: 'Poppins', sans-serif !important;
 }
+
 .inv-option-item > label {
-    color: white;
+    color: rgb(255, 255, 255);
     text-align: center;
     line-height: 48px;
     text-transform: normal;
@@ -361,7 +362,7 @@ body {
     width: auto;
     top: 0px;
     left: 0px;
-    background-color: rgb(34 39 48) !important;
+    background-color: rgb(255, 255, 255) !important;
     text-align: center;
     line-height: 48px;
     font-size: 1.2vh;
@@ -370,13 +371,13 @@ body {
     border-radius: 0px;
     border-width: 1px;
     border-style: solid;
-    border-color: rgba(255, 255, 255, 0.01);
+    border-color: rgba(2, 2, 2, 0.01);
     border-image: initial;
     transition: background-color 0.1s linear 0s;
 }
 
 .btn-combine > p {
-    color: white;
+    color: rgb(255, 255, 255);
     text-align: center;
     font-size: 1.5vh;
     font-weight: 150;
@@ -395,7 +396,7 @@ body {
     color: #ffffff;
     text-align: right;
     font-size: 1.25vh;
-    font-weight: 200;
+    font-weight: 300;
     cursor: none;
 }
 
@@ -428,9 +429,9 @@ body {
     font-weight: 200;
     padding: 2.5px;
     padding-left: 5px;
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 1.3vh;
-    text-align: left;
+    text-align: center;
     letter-spacing: 0px;
     font-family: 'Poppins', sans-serif !important;
     white-space: pre;
@@ -579,10 +580,10 @@ body {
 }
 
 .ply-iteminfo-container {
-    background: rgb(34 39 48);
+    background: rgb(34, 39, 48, 0.850);
     border-radius: 3px;
     color: rgba(220, 220, 220, 1);
-    border: 2px solid rgb(36, 41, 49);
+    border: 2px solid rgb(34, 39, 48, 0.850);
     font-size: 1vh;
     font-weight: 0;
     left: 41%;
@@ -655,12 +656,12 @@ body {
     margin-right: 1vh;
     width: 10vh;
     height: 11vh;
-    background: rgb(34 39 48);
+    background: rgb(34, 39, 48, 0.850);
 }
 
 #itembox-action {
     position: absolute;
-    color: white;
+    color: rgb(255, 255, 255);
     border-top-left-radius: 1px;
     padding: 4px;
     top: 0;
@@ -720,7 +721,7 @@ body {
     height: 11vh;
     float: left;
     margin-left: 20px;
-    background: rgb(34 39 48);
+    background: rgb(34, 39, 48, 0.850);
 }
 
 #requiredItem-action {
@@ -774,6 +775,7 @@ body {
     right: 0;
     width: fit-content;
     z-index: 105;
+    transform: scale(0.8);
 }
 
 .z-hotbar-inventory > .z-hotbar-item-slot > .z-hotbar-item-slot-key > p {
@@ -784,9 +786,9 @@ body {
     padding-bottom: 0px;
     padding-left: 2.5vh;
     text-align: left;
-    font-size: 0vh;
+    font-size: 9vh;
     line-height: 0.5vh;
-    font-family: Poppins, sans-serif !important;
+    font-family: 'Poppins', sans-serif !important;
     z-index: -1;
 }
 
@@ -800,7 +802,7 @@ body {
     margin: 3px;
     transition: opacity 0.2s;
     opacity: 1.0;
-    background: rgb(34 39 48);
+    background: rgb(34, 39, 48, 0.850);
     z-index: 9999;
 }
 
@@ -1034,7 +1036,7 @@ body {
 
 .weapon-attachment:hover {
     background-color: rgba(0, 0, 0, 0.4);
-    border: 1px solid rgb(29, 29, 29);
+    border: 1px solid rgb(34, 39, 48, 0.850);
     transition: .05s linear;
 }
 
@@ -1127,7 +1129,7 @@ body {
     width: 10vh;
     height: 6vh;
     margin: 5vh;
-    background-color: rgb(15, 15, 15);
+    background-color: rgb(34, 39, 48, 0.850);
     border-radius: 1px;
     text-align: center;
     line-height: 6vh;
@@ -1137,7 +1139,7 @@ body {
 }
 
 .weapon-attachments-back:hover {
-    background-color: rgb(18, 18, 18);
+    background-color: rgb(34, 39, 48, 0.850);
 }
 
 .color-picker-container {
@@ -1160,7 +1162,7 @@ body {
     right: 0;
     top: 0;
     bottom: 0;
-    background: rgb(35, 34, 56);
+    background: rgb(34, 39, 48, 0.850);
     border-radius: .2em;
     z-index: 560;
     overflow-y: scroll;
@@ -1188,5 +1190,5 @@ body {
 }
 
 .GiveItemPlayersButton:hover { 
-    background-color: rgba(48, 48, 56, 0.804)
+    background-color: rgba(34, 39, 48, 0.850)
 }
