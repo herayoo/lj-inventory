@@ -1,4 +1,4 @@
-lj-inventory css edit like NoPixel 3.5 and ED:V
+lj-inventory edit like NoPixel 3.5 and ED:V
 
 - give menu and you can chose the player
 - adjustable craft button
