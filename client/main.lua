@@ -566,7 +566,8 @@ RegisterNetEvent('inventory:client:OpenInventory', function(PlayerAmmo, inventor
                     other = other,
                     maxweight = Config.MaxInventoryWeight,
                     Ammo = PlayerAmmo,
-                    para = PlayerData.charinfo.firstname..' '..PlayerData.charinfo.lastname..' [ID: '..PlayerData.source..'] - '..PlayerData.citizenid,
+                    para = PlayerData.charinfo.firstname..' '..PlayerData.charinfo.lastname..' ['..PlayerData.source,
+                    paraa = PlayerData.money["cash"],
                     maxammo = Config.MaximumAmmoValues,
                 })
                 inInventory = true
@@ -589,7 +590,8 @@ RegisterNetEvent('inventory:client:OpenInventory', function(PlayerAmmo, inventor
                 other = other,
                 maxweight = Config.MaxInventoryWeight,
                 Ammo = PlayerAmmo,
-                para = PlayerData.charinfo.firstname..' '..PlayerData.charinfo.lastname..' ['..PlayerData.source..'] - '..PlayerData.citizenid,
+                para = PlayerData.charinfo.firstname..' '..PlayerData.charinfo.lastname..' ['..PlayerData.source,
+                paraa = PlayerData.money["cash"],
                 maxammo = Config.MaximumAmmoValues,
             })
             inInventory = true

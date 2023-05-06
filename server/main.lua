@@ -1243,10 +1243,10 @@ RegisterNetEvent('inventory:server:OpenInventory', function(name, id, other)
 					end
 				end
 			elseif name == "shop" then
-				para = Player.PlayerData.money["cash"]
+				paraa = Player.PlayerData.money["cash"]
 				secondInv.name = "itemshop-"..id
 --[[ 				secondInv.label = other.label.." "..para ]]
-				secondInv.label = '<i class="fas fa-shopping-basket"></i>'.." "..other.label.." - Nakit: "..'<span style="color:#64e778;">'..para.."$</span>".." "..''
+				secondInv.label = '<i class="fas fa-shopping-basket"></i>'.." "..other.label.." - Nakit: "..'<span style="color:#64e778;">'..paraa.."$</span>".." "..''
 --[[ 				secondInv.label = ""..other.label..'<span style="color:#64e778;''- Nakit: '..para.."$</span>" ]]
 				secondInv.maxweight = 900000
 				secondInv.inventory = SetupShopItems(other.items)
