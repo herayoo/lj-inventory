@@ -7,7 +7,7 @@ lj-inventory edit like NoPixel 3.5 and ED:V
 - oto me when you open the glovebox or the trunk
 
 # Previews
-https://media.discordapp.net/attachments/1102928787232014437/1104110982034366545/image.png?width=1440&height=646
+https://media.discordapp.net/attachments/1101908304080425141/1104206043078201424/image.png?width=1440&height=641
 
 # Credits
 @ProjectSloth https://github.com/Project-Sloth
